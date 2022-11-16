@@ -1,0 +1,214 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  transition: opacity var(--time-distribution), visibility var(--time-distribution);
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+
+  background-color: var(--white-base);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform var(--time-distribution);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0) rotate(180deg);
+  }
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 50%;
+
+  background-color: var(--white-base);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-icon {
+  fill: var(--black);
+  transform: rotate(0);
+
+  transition: fill var(--time-distribution), transform var(--time-distribution);
+
+  &:hover,
+  &:focus {
+    fill: var(--brand-color);
+    transform: rotate(90deg);
+  }
+}
+
+/* Модальна форма */
+
+.modal-title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.modal-area {
+  margin-bottom: 10px;
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+
+.modal-label {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--txt-secondary);
+
+  & span {
+    display: block;
+    margin-bottom: 4px;
+  }
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 12px;
+
+  color: var(--txt-secondary);
+  font-size: 14px;
+  line-height: 1.42;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition: border-color var(--time-distribution), fill var(--time-distribution);
+
+  &:focus {
+    border-color: var(--brand-color);
+  }
+}
+
+.modal-input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .modal-input:focus + & {
+    fill: var(--brand-color);
+  }
+}
+
+.modal-area-comment {
+  margin-bottom: 20px;
+}
+
+.modal-comment {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+
+  color: var(--txt-secondary);
+  font-size: 14px;
+  line-height: 1.42;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  resize: none;
+
+  transition: border-color var(--time-distribution);
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.66;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    border-color: var(--brand-color);
+  }
+}
+
+/* Умови договору */
+
+.modal-check {
+  margin-bottom: 30px;
+}
+
+.modal-text-agreement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--txt-secondary);
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.modal-text-agreement span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid var(--txt-primary);
+  border-radius: 2px;
+  fill: transparent;
+
+  transition: border-color var(--time-distribution);
+
+  .modal-agreement:checked + & {
+    background-color: var(--brand-color);
+    border-color: transparent;
+    fill: var(--white-base);
+  }
+
+  .modal-agreement:focus + & {
+    border-color: var(--brand-color);
+  }
+}
+
+.modal-agreement-link {
+  color: var(--brand-color);
+}
+
+.modal-send-button {
+  min-width: 200px;
+  padding: 10px 52px;
+}

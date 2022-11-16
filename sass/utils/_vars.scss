@@ -1,0 +1,36 @@
+/* Кольори */
+
+/* Білий (осн. фон та дод. текст)– #ffffff; */
+/* Колір бренду (активний) – #2196f3; */
+
+/* Додатковий фон1 – background: #2f303a; */
+/* Додатковий фон2 – background: #f5f4fa; */
+
+/* Основний текст – color: #212121; */
+/* Додатковий текст – color: #757575; */
+
+/* Колір кнопки (активний) - #188ce8; */
+/* Чорний – #000000; */
+/* Білий з прозорістю – rgba(255, 255, 255, 0.6); */
+/* Сірий border хедер – #ececec; */
+/* Сірий border картки – #eeeeee; */
+
+/* Фон Hero – #c4c4c4; */
+/* Колір іконок – #afb1b8 */
+
+:root {
+  --white-base: #ffffff;
+  --brand-color: #2196f3;
+  --bgrd-primary: #2f303a;
+  --bgrd-secondary: #f5f4fa;
+  --txt-primary: #212121;
+  --txt-secondary: #757575;
+  --button-active: #188ce8;
+  --black: #000000;
+  --white-transparency: rgba(255, 255, 255, 0.6);
+  --border-header-gray: #ececec;
+  --border-cards-gray: #eeeeee;
+  --bgrd-hero: #c4c4c4;
+  --icon-color: #afb1b8;
+  --time-distribution: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

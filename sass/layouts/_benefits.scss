@@ -1,0 +1,39 @@
+.draw {
+  padding-bottom: 0;
+}
+
+.draw__list {
+  display: flex;
+  gap: 30px;
+
+  & .draw__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+.draw__subtitle {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.draw__text {
+  color: var(--txt-secondary);
+
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.draw__box-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+
+  background-color: var(--bgrd-secondary);
+}
