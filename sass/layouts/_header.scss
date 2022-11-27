@@ -2,9 +2,36 @@
   border-bottom: 1px solid var(--border-header-gray);
 }
 
+.header-navigation {
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: 1199px) {
+    justify-content: space-between;
+  }
+}
+
 .main-navigation {
   display: flex;
   align-items: center;
+}
+
+.mobile-open-button {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    min-height: 40px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+  display: none;
 }
 
 /* Шапка посилання */
@@ -27,7 +54,14 @@
 
 /* Шапка навігація */
 
-.header-navigation {
+.header-navigation-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-left: 88px;
+  }
+
   display: flex;
   gap: 50px;
   margin-left: 93px;
@@ -56,25 +90,52 @@
 }
 /* Шапка контакти */
 
-.header-contacts {
-  display: flex;
-  gap: 50px;
-  margin-left: auto;
-  align-items: center;
+.header-contacts-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-  & .link {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  & .header-link {
     color: var(--txt-secondary);
   }
 
-  & .link:hover,
-  & .link:focus {
+  & .header-link:hover,
+  & .header-link:focus {
     color: var(--brand-color);
   }
 }
 
+.header-contacts-item:not(:last-child) {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+}
+
 .header-link {
-  display: flex;
-  align-items: center;
+  color: var(--txt-primary);
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  transition: color var(--time-distribution);
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .icon-contacts {

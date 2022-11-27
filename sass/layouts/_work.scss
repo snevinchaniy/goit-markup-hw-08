@@ -1,11 +1,17 @@
+.photo {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
 .photo__list {
   display: flex;
   gap: 30px;
+}
 
-  & .photo__item {
-    position: relative;
-    flex-basis: calc((100% - 60px) / 3);
-  }
+.photo__item {
+  position: relative;
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 .photo__box {

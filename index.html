@@ -18,54 +18,108 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
-      <div class="container main-navigation">
-        <nav class="main-navigation">
-          <!-- Шапка лого -->
-          <a href="./index.html" class="logo">Web<span class="logo--color-black">Studio</span></a>
-
-          <!-- Шапка навігація -->
-          <ul class="header-navigation list">
-            <li class="item"><a href="./index.html" class="link current">Студія</a></li>
-            <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
-            <li class="item"><a href="#" class="link">Контакти</a></li>
+      <div class="container">
+        <div class="header-navigation">
+          <nav class="main-navigation">
+            <a href="./index.html" class="logo">Web<span class="logo--color-black">Studio</span></a>
+            <ul class="header-navigation-list list">
+              <li class="item"><a href="./index.html" class="link current">Студія</a></li>
+              <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
+              <li class="item"><a href="#" class="link">Контакти</a></li>
+            </ul>
+          </nav>
+          <ul class="header-contacts-list list">
+            <li class="header-contacts-item">
+              <a href="mailto:info@devstudio.com" class="header-link">
+                <svg class="icon-contacts" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="header-contacts-item">
+              <a href="tel:+380961111111" class="header-link">
+                <svg class="icon-contacts" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
           </ul>
-        </nav>
+          <button type="button" class="mobile-open-button" data-menu-open>
+            <svg class="mobile-open-icon" width="40" height="40">
+              <use href="./images/icons.svg#icon-menu-open"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
 
-        <!-- Шапка контакти -->
-        <ul class="header-contacts list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="header-link link">
-              <svg class="icon-contacts" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="header-link link">
-              <svg class="icon-contacts" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+      <div class="mobile-menu is-hidden" data-menu>
+        <button type="button" class="mobile-close-button" data-menu-close>
+          <svg class="mobile-close-icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+        <div class="mobile-container">
+          <div class="mobile-top">
+            <ul class="mobile-nav-list list">
+              <li class="mobile-nav-item">
+                <a href="./index.html" class="mobile-nav-link mobile-current">Студія</a>
+              </li>
+              <li class="mobile-nav-item">
+                <a href="./portfolio.html" class="mobile-nav-link">Портфоліо</a>
+              </li>
+              <li class="mobile-nav-item"><a href="#" class="mobile-nav-link">Контакти</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-bottom">
+            <ul class="mobile-contacts-list list">
+              <li class="mobile-contacts-item">
+                <a href="tel:+380961111111" class="mobile-tel-link"> +38 096 111 11 11</a>
+              </li>
+              <li class="mobile-contacts-item">
+                <a href="mailto:info@devstudio.com" class="mobile-email-link">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-social-list list">
+              <li class="mobile-social-item">
+                <a href="https://www.instagram.com/" target="_blank" class="mobile-soc-link">
+                  Instagram
+                </a>
+              </li>
+              <li class="mobile-social-item">
+                <a href="https://twitter.com/?lang=uk" target="_blank" class="mobile-soc-link">
+                  Twitter
+                </a>
+              </li>
+              <li class="mobile-social-item">
+                <a href="https://uk-ua.facebook.com/" target="_blank" class="mobile-soc-link">
+                  Facebook
+                </a>
+              </li>
+              <li class="mobile-social-item">
+                <a href="https://www.linkedin.com/" target="_blank" class="mobile-soc-link">
+                  LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- Герой -->
       <section class="hero">
-        <div class="container">
-          <h1 class="hero-title">
-            Ефективні рішення для <br />
-            вашого бізнесу
-          </h1>
+        <div class="container hero-wrap">
+          <h1 class="hero-title">Ефективні рішення для<br />вашого бізнесу</h1>
           <button type="button" class="main-button hero-button" data-modal-open>
             Замовити послугу
           </button>
@@ -151,7 +205,7 @@
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
-            <li class="item">
+            <li class="team-item">
               <img src="./images/img1.jpg" alt="Ігор Дем'яненко" width="270" height="260" />
               <div class="team-card">
                 <h3 class="team-subtitle">Ігор Дем'яненко</h3>
@@ -204,7 +258,7 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="team-item">
               <img src="./images/img2.jpg" alt="Ольга Рєпіна" width="270" height="260" />
               <div class="team-card">
                 <h3 class="team-subtitle">Ольга Рєпіна</h3>
@@ -257,7 +311,7 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="team-item">
               <img src="./images/img3.jpg" alt="Микола Тарасов" width="270" height="260" />
               <div class="team-card">
                 <h3 class="team-subtitle">Микола Тарасов</h3>
@@ -310,7 +364,7 @@
                 </ul>
               </div>
             </li>
-            <li class="item">
+            <li class="team-item">
               <img src="./images/img4.jpg" alt="Михайло Єрмаков" width="270" height="260" />
               <div class="team-card">
                 <h3 class="team-subtitle">Михайло Єрмаков</h3>
@@ -416,10 +470,8 @@
     <footer class="footer">
       <div class="container footer-container">
         <div class="footer-contacts">
-          <!-- Підвал лого -->
           <a href="./index.html" class="logo">Web<span class="logo--color-white">Studio</span></a>
 
-          <!-- Підвал контакти -->
           <address class="footer-address">
             <ul class="address-list list">
               <li class="item">
@@ -442,7 +494,6 @@
           </address>
         </div>
 
-        <!-- Підвал соціальні іконки -->
         <div class="footer-social-iconbox">
           <p class="footer-subtitle">Приєднуйтесь</p>
           <ul class="social-list list">
@@ -493,7 +544,6 @@
           </ul>
         </div>
 
-        <!-- Підвал форма -->
         <div class="footer-subscribe">
           <p class="footer-subtitle">Підпишіться на розсилку</p>
           <form class="footer-form">
@@ -607,5 +657,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

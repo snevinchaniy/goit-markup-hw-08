@@ -1,9 +1,3 @@
-.footer-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -11,10 +5,54 @@
   background-color: var(--bgrd-primary);
 }
 
+.footer-container {
+  display: flex;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+
 /* Підвал контакти */
+.footer-contacts {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 165px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 0;
+  }
+}
 
 .footer-address {
   margin-top: 20px;
+}
+
+.footer-address .item {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .address-list .item + .item {
@@ -42,6 +80,16 @@
 
 /* Підвал соціальні іконки */
 
+.footer-social-iconbox {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+}
+
 .footer-subtitle {
   margin-bottom: 20px;
 
@@ -68,17 +116,46 @@
 }
 
 /* Підвал форма */
+.footer-subscribe {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .footer-input-wrap {
   display: flex;
+
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .footer-input {
-  width: 358px;
-  height: 50px;
   padding-left: 16px;
   padding-right: 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 479px) {
+    width: 290px;
+    height: 50px;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 50px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 
   color: var(--white-base);
   background-color: transparent;
