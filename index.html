@@ -185,15 +185,33 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="photo__list list">
             <li class="photo__item">
-              <img src="./images/box1.jpg" alt="Десктопні додатки" width="370" height="294" />
+              <img
+                srcset="./images/desk/work1-desk-1x.jpg 1x, ./images/desk/work1-desk-2x.jpg 2x"
+                src="./images/desk/work1-desk-1x.jpg"
+                alt="Десктопні додатки"
+                width="370"
+                height="294"
+              />
               <p class="photo__box">Десктопні додатки</p>
             </li>
             <li class="photo__item">
-              <img src="./images/box2.jpg" alt="Мобільні додатки" width="370" height="294" />
+              <img
+                srcset="./images/desk/work2-desk-1x.jpg 1x, ./images/desk/work2-desk-2x.jpg 2x"
+                src="./images/desk/work2-desk-1x.jpg"
+                alt="Мобільні додатки"
+                width="370"
+                height="294"
+              />
               <p class="photo__box">Мобільні додатки</p>
             </li>
             <li class="photo__item">
-              <img src="./images/box3.jpg" alt="Дизайнерські рішення" width="370" height="294" />
+              <img
+                srcset="./images/desk/work3-desk-1x.jpg 1x, ./images/desk/work3-desk-2x.jpg 2x"
+                src="./images/desk/work3-desk-1x.jpg"
+                alt="Дизайнерські рішення"
+                width="370"
+                height="294"
+              />
               <p class="photo__box">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -206,7 +224,25 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-item">
-              <img src="./images/img1.jpg" alt="Ігор Дем'яненко" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desk/people1-desk-1x.jpg 1x,
+                    ./images/desk/people1-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tab/people1-tab-1x.jpg 1x, ./images/tab/people1-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mob/people1-mob-1x.jpg 1x, ./images/mob/people1-mob-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/mob/people1-mob-1x.jpg" alt="Ігор Дем'яненко" width="450" />
+              </picture>
+
               <div class="team-card">
                 <h3 class="team-subtitle">Ігор Дем'яненко</h3>
                 <p class="team-text">Product Designer</p>
@@ -259,7 +295,25 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/img2.jpg" alt="Ольга Рєпіна" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desk/people2-desk-1x.jpg 1x,
+                    ./images/desk/people2-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tab/people2-tab-1x.jpg 1x, ./images/tab/people2-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mob/people2-mob-1x.jpg 1x, ./images/mob/people2-mob-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/mob/people2-mob-1x.jpg" alt="Ольга Рєпіна" width="450" />
+              </picture>
+
               <div class="team-card">
                 <h3 class="team-subtitle">Ольга Рєпіна</h3>
                 <p class="team-text">Frontend Developer</p>
@@ -312,7 +366,25 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/img3.jpg" alt="Микола Тарасов" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desk/people3-desk-1x.jpg 1x,
+                    ./images/desk/people3-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tab/people3-tab-1x.jpg 1x, ./images/tab/people3-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mob/people3-mob-1x.jpg 1x, ./images/mob/people3-mob-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/mob/people3-mob-1x.jpg" alt="Микола Тарасов" width="450" />
+              </picture>
+
               <div class="team-card">
                 <h3 class="team-subtitle">Микола Тарасов</h3>
                 <p class="team-text">Marketing</p>
@@ -365,7 +437,25 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/img4.jpg" alt="Михайло Єрмаков" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desk/people4-desk-1x.jpg 1x,
+                    ./images/desk/people4-desk-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/tab/people4-tab-1x.jpg 1x, ./images/tab/people4-tab-2x.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/mob/people4-mob-1x.jpg 1x, ./images/mob/people4-mob-2x.jpg 2x"
+                  media="(min-width: 320px)"
+                />
+                <img src="./images/mob/people4-mob-1x.jpg" alt="Михайло Єрмаков" width="450" />
+              </picture>
+
               <div class="team-card">
                 <h3 class="team-subtitle">Михайло Єрмаков</h3>
                 <p class="team-text">UI Designer</p>

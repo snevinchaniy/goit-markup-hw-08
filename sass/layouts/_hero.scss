@@ -2,28 +2,40 @@
   position: relative;
   // padding-top: 200px;
   // padding-bottom: 200px;
-
-  width: auto;
   height: 400px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
+    // width: auto;
     max-width: 480px;
+    background-image: var(--gradient-hero), url(../images/mob/img-hero-mob-1x.jpg);
+
+    @include retina {
+      background-image: var(--gradient-hero), url(../images/mob/img-hero-mob-2x.jpg);
+    }
   }
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
+    background-image: var(--gradient-hero), url(../images/tab/img-hero-tab-1x.jpg);
+
+    @include retina {
+      background-image: var(--gradient-hero), url(../images/tab/img-hero-tab-2x.jpg);
+    }
   }
 
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
     height: 600px;
+    background-image: var(--gradient-hero), url(../images/desk/img-hero-desk-1x.jpg);
+
+    @include retina {
+      background-image: var(--gradient-hero), url(../images/desk/img-hero-desk-2x.jpg);
+    }
   }
 
   margin-left: auto;
   margin-right: auto;
 
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/img-hero.jpg);
   background-color: var(--bgrd-hero);
   background-repeat: no-repeat;
   background-position: center;
