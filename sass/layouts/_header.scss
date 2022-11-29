@@ -147,3 +147,17 @@
     fill: var(--brand-color);
   }
 }
+
+.icon-contacts-email {
+  @media screen and (min-width: 1200px) {
+    width: 16px;
+    height: 12px;
+  }
+}
+
+.icon-contacts-tel {
+  @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
+  }
+}

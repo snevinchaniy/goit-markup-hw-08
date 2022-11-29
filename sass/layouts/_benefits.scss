@@ -1,8 +1,8 @@
 .draw {
-  padding-bottom: 0;
+  padding-bottom: 60px;
 
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
   }
 }
 

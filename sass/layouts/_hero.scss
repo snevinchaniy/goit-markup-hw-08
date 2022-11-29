@@ -1,11 +1,20 @@
 .hero {
   position: relative;
-  // padding-top: 200px;
-  // padding-bottom: 200px;
-  height: 400px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--bgrd-hero);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+
+  text-align: center;
 
   @media screen and (max-width: 767px) {
-    // width: auto;
     max-width: 480px;
     background-image: var(--gradient-hero), url(../images/mob/img-hero-mob-1x.jpg);
 
@@ -25,31 +34,14 @@
 
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
-    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: var(--gradient-hero), url(../images/desk/img-hero-desk-1x.jpg);
 
     @include retina {
       background-image: var(--gradient-hero), url(../images/desk/img-hero-desk-2x.jpg);
     }
   }
-
-  margin-left: auto;
-  margin-right: auto;
-
-  background-color: var(--bgrd-hero);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  flex-grow: 1;
-
-  text-align: center;
-}
-
-.hero-wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .hero-title {
